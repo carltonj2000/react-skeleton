@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import SkeletonProfile from "../skeletons/SkeletonProfile";
 
 function User() {
   const [profile, profileSet] = useState(null);
-
+  /*
   useEffect(() => {
     const to = setTimeout(async () => {
       const resp = await fetch("https://jsonplaceholder.typicode.com/users/1");
@@ -13,7 +14,7 @@ function User() {
       clearTimeout(to);
     };
   }, []);
-
+*/
   return (
     <div className="user">
       <h2>User Details</h2>
@@ -24,11 +25,7 @@ function User() {
           <a href={profile.website}>{profile.website}</a>
         </div>
       ) : (
-        <div className="profile skeleton">
-          <h3> </h3>
-          <p></p>
-          <a href="/"> </a>
-        </div>
+        <SkeletonProfile theme="dark" />
       )}
     </div>
   );

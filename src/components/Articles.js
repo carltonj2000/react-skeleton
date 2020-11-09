@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import SkeletonArticle from "../skeletons/SkeletonArticle";
 
 function Articles() {
   const [articles, articlesSet] = useState(null);
-
+  /*
   useEffect(() => {
     const to = setTimeout(async () => {
       const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -13,6 +14,7 @@ function Articles() {
       clearTimeout(to);
     };
   }, []);
+*/
   return (
     <div className="articles">
       <h2>Articles</h2>
@@ -23,14 +25,9 @@ function Articles() {
               <p>{article.body}</p>
             </div>
           ))
-        : Array(3)
+        : Array(5)
             .fill("")
-            .map((_, idx) => (
-              <div className="article skeleton" key={idx}>
-                <h3> </h3>
-                <p> </p>
-              </div>
-            ))}
+            .map((_, idx) => <SkeletonArticle key={idx} theme="light" />)}
     </div>
   );
 }

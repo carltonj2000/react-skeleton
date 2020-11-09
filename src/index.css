@@ -35,7 +35,7 @@ h2 {
   max-width: 1200px;
   margin: 0 auto;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 100px;
+  grid-gap: 20px;
 }
 
 .profile {
@@ -58,7 +58,7 @@ h2 {
   border-radius: 20px;
 }
 
-.article.skeleton h3 {
+.article.skeletonA h3 {
   min-width: 100px;
   min-height: 16px;
   background: green;
