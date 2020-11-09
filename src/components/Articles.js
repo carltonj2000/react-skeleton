@@ -3,7 +3,7 @@ import SkeletonArticle from "../skeletons/SkeletonArticle";
 
 function Articles() {
   const [articles, articlesSet] = useState(null);
-  /*
+
   useEffect(() => {
     const to = setTimeout(async () => {
       const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -14,7 +14,7 @@ function Articles() {
       clearTimeout(to);
     };
   }, []);
-*/
+
   return (
     <div className="articles">
       <h2>Articles</h2>
